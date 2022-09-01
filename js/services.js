@@ -3,13 +3,12 @@
 //A função retorna um objeto com itens de produtos
 //Emitindo um alerta caso a conexão falhe
 
-function buscaProdutosApi() {
+function FindProductsApi() {
     fetch("https://wine-back-test.herokuapp.com/products?page=1&limit=5")
         .then(async (res) => {
-            const resultado = await res.json();
-            console.log(resultado);
-
-            return resultado;
+            const result = await res.json();
+            console.log(result);
+            displayProducts(result);
 
         })
         .catch(err => {
