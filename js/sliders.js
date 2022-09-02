@@ -4,3 +4,13 @@ $(document).ready(function() {
         dots:true
     });
 });
+
+$(document).ready(function() {
+    $('.SliderServices').slick({
+        centerMode:true,
+        centerPadding:'12.5%',
+        dots:true
+    });
+});
+
+

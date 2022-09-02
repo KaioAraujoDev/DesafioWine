@@ -7,8 +7,17 @@
     box-sizing: border-box;
     margin: 0;
     list-style: none;
-   
 }
+
+// Declaração de variaveis 
+
+$gray-dark: #333333;
+$gray-over:#E6E6E6;
+$gray-default:#555555;
+$sauvignon-default: #EE3E80;
+
+$font-neo: 'neo-sans',sans-serif;
+$font-lato: 'lato',sans-serif;
 
 body{
     width: 100vw;
@@ -23,19 +32,75 @@ header{
     }
 }
 
+//Estilização do Slider Principal
+
 .SliderPresentation{
     width: 100%;
     height: auto;
-
+    margin: 0;
     div img{
         width: 100%;
         
     }
 
+}
+
+//Seção como funciona
+
+.About{
+    margin-bottom: 2.5em;
+    h2{
+        font-family: $font-neo;
+     
+        text-align: center;
+        font-weight: 700;
+        color: $gray-dark;
+        margin: 1.5em 0 .75em 0;
+    }
+    .aboutDescription{  
+        font-family: $font-lato;
+        line-height: 1.15em;
+        color: $gray-default;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+
+}
+
+/*Slider -  Como funciona */
+
+.SliderServices{
+    margin: 1.5em 0 2em;
+    div{
+        padding: 0 .75%;
+    }
+    div img{
+        width: 100%;
+    }
+    .descriptionPresentation h3{
+        text-align: center;
+        font-family: $font-neo;
+        color: $sauvignon-default;
+        font-weight: 500;
+        font-size: 1.35em;
+        margin: 1em 0;
+    }
+    .descriptionPresentation p{
+        font-family: $font-lato;
+        color:$gray-default;
+        line-height: 1.5em;
+        text-align: center;
+        font-size: .85em;
+    }
+    
     .slick-dots{
-        bottom: .5em;
-        li{
-            margin:0 0 0 0.15em;
-        }
+        bottom: -3em;
+    }
+    .slick-dots li button:before{
+        background-color: $gray-over;
+    }
+    .slick-dots li.slick-active button:before{
+        background-color: $sauvignon-default;
     }
 }

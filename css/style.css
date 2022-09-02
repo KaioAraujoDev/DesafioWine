@@ -22,15 +22,63 @@ header .imgLogo {
 .SliderPresentation {
   width: 100%;
   height: auto;
+  margin: 0;
 }
 .SliderPresentation div img {
   width: 100%;
 }
-.SliderPresentation .slick-dots {
-  bottom: 0.5em;
+
+.About {
+  margin-bottom: 2.5em;
 }
-.SliderPresentation .slick-dots li {
-  margin: 0 0 0 0.15em;
+.About h2 {
+  font-family: "neo-sans", sans-serif;
+  text-align: center;
+  font-weight: 700;
+  color: #333333;
+  margin: 1.5em 0 0.75em 0;
+}
+.About .aboutDescription {
+  font-family: "lato", sans-serif;
+  line-height: 1.15em;
+  color: #555555;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+/*Slider -  Como funciona */
+.SliderServices {
+  margin: 1.5em 0 2em;
+}
+.SliderServices div {
+  padding: 0 0.75%;
+}
+.SliderServices div img {
+  width: 100%;
+}
+.SliderServices .descriptionPresentation h3 {
+  text-align: center;
+  font-family: "neo-sans", sans-serif;
+  color: #EE3E80;
+  font-weight: 500;
+  font-size: 1.35em;
+  margin: 1em 0;
+}
+.SliderServices .descriptionPresentation p {
+  font-family: "lato", sans-serif;
+  color: #555555;
+  line-height: 1.5em;
+  text-align: center;
+  font-size: 0.85em;
+}
+.SliderServices .slick-dots {
+  bottom: -3em;
+}
+.SliderServices .slick-dots li button:before {
+  background-color: #E6E6E6;
+}
+.SliderServices .slick-dots li.slick-active button:before {
+  background-color: #EE3E80;
 }
 
 /*# sourceMappingURL=style.css.map */
