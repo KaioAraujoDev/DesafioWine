@@ -1,3 +1,5 @@
+//Reset de espaçamentos e bordas padrões
+
 *{
     border:none;
     outline: none;
@@ -5,14 +7,35 @@
     box-sizing: border-box;
     margin: 0;
     list-style: none;
+   
 }
 
 body{
     width: 100vw;
 }
+
+
 header{
     text-align: center;
+    padding: .5em 0;
     .imgLogo{
-        width: 15%;
+        width: 2.5em;
+    }
+}
+
+.SliderPresentation{
+    width: 100%;
+    height: auto;
+
+    div img{
+        width: 100%;
+        
+    }
+
+    .slick-dots{
+        bottom: .5em;
+        li{
+            margin:0 0 0 0.15em;
+        }
     }
 }

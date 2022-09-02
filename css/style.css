@@ -13,9 +13,24 @@ body {
 
 header {
   text-align: center;
+  padding: 0.5em 0;
 }
 header .imgLogo {
-  width: 15%;
+  width: 2.5em;
+}
+
+.SliderPresentation {
+  width: 100%;
+  height: auto;
+}
+.SliderPresentation div img {
+  width: 100%;
+}
+.SliderPresentation .slick-dots {
+  bottom: 0.5em;
+}
+.SliderPresentation .slick-dots li {
+  margin: 0 0 0 0.15em;
 }
 
 /*# sourceMappingURL=style.css.map */
