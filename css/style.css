@@ -357,4 +357,46 @@ section.Benefits .listBenefits li button p {
   transform: scale(1.15);
 }
 
+/*Modal*/
+.Modal {
+  width: 20em;
+  position: relative;
+  text-align: center;
+  padding: 1.5em 1.5em;
+  height: 20em !important;
+}
+.Modal .btnCloseModal {
+  position: absolute;
+  top: -7.5%;
+  right: -7.5%;
+  background: none;
+}
+.Modal .btnCloseModal img {
+  width: 95%;
+}
+.Modal h2 {
+  font-family: "neo-sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.15em;
+  margin-bottom: 1.5em;
+  color: #333333;
+}
+.Modal .imgModal {
+  width: 35%;
+  margin-bottom: 1.5em;
+}
+.Modal p, .Modal strong {
+  font-family: "lato", sans-serif;
+  font-size: 0.75rem;
+}
+.Modal strong {
+  font-weight: 700;
+}
+.Modal p {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #555555;
+  padding: 0 1.1em;
+}
+
 /*# sourceMappingURL=style.css.map */
