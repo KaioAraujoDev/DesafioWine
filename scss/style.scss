@@ -15,9 +15,14 @@ $background: #F5F5F5;
 $gray-dark: #333333;
 $gray-over: #E6E6E6;
 $gray-default: #555555;
+$gray: #888888;
 $sauvignon-default: #EE3E80;
 $white: #ffffff;
+$purple: #3C214B;
+
 $shadow: hsla(0, 0%, 0%, 0.2);
+
+$success-default :#7EBC43;
 
 $font-neo: 'neo-sans', sans-serif;
 $font-lato: 'lato', sans-serif;
@@ -27,7 +32,7 @@ body {
 }
 
 
-header {
+header , footer{
     text-align: center;
     padding: .5em 0;
     background-color: $background;
@@ -35,6 +40,10 @@ header {
     .imgLogo {
         width: 2.5em;
     }
+}
+
+footer .imgLogo{
+    width: 2.5em;
 }
 
 //Estilização do Slider Principal
@@ -123,7 +132,8 @@ header {
 /*Seção Benefícios*/
 
 section.Benefits {
-    background-color: $sauvignon-default;
+    background: url("../assets/ImgsBackground/bg-textura-wine.png"),$sauvignon-default;
+    background-position: top left;
     padding-bottom: 1.5em;
 
     h2 {
@@ -142,19 +152,19 @@ section.Benefits {
     }
 
     .listBenefits li:nth-child(1) button {
-        background: no-repeat url("/assets/ImgsBackground/tangran-01.png"), $white ;
+        background: no-repeat url("../assets/ImgsBackground/tangran-01.png"), $white ;
     }
 
     .listBenefits li:nth-child(2) button {
-        background: no-repeat url("/assets/ImgsBackground/tangran-02.png"), $white ;
+        background: no-repeat url("../assets/ImgsBackground/tangran-02.png"), $white ;
     }
 
     .listBenefits li:nth-child(3) button {
-        background: no-repeat url("/assets/ImgsBackground/tangran-03.png"), $white ;
+        background: no-repeat url("../assets/ImgsBackground/tangran-03.png"), $white ;
     }
 
     .listBenefits li:nth-child(4) button {
-        background: no-repeat url("/assets/ImgsBackground/tangran-04.png"), $white ;
+        background: no-repeat url("../assets/ImgsBackground/tangran-04.png"), $white ;
     }
 
     .listBenefits li button {
@@ -196,23 +206,51 @@ section.Benefits {
 
 }
 
+/*Estilizando lista de produto*/
+.listProducts{
+    .slick-list{
+        padding: 0 7% !important;
+    }
+    .slick-slide{
+        width: 15em!important;
+        padding: 0 1% 0 0;
+    }
+    li .btnAddProduct{
+        text-align: center;
+        width: 100%;
+        padding: 1em 0;
+        margin-top: 1.25em;
+        background: $success-default;
+        font-family: $font-lato;
+        font-weight: 700;
+        color: $white;
+        border-radius: 0.25em;
+        transition: .5s;
+        cursor: pointer;
+    }
+    li .btnAddProduct:hover{
+        transform: scale(1.05);
+    }
+}
 /*Estilizando card de produto*/
 
 .cardItem {
     position: relative;
     border-radius: .25em;
     background-color: $white;
-    box-shadow: 0 1px 2px 0 $shadow;
-    padding: 1em 1.25em;
+    box-shadow: 0 .1em .15em 0 $shadow;
+    padding: 0.75em 0.75em;
+    width: 100%;
 
     /*Botão de favoritar*/
     .btnFavorite{
         position: absolute;
         top:0;
         right: 0;
+        cursor: pointer;
     }
     .btnFavorite .imgFavorite{
-        width: 2em;
+        width: 1.5em;
         background-color: $white;
     }
 
@@ -244,7 +282,7 @@ section.Benefits {
         justify-content: center;
     }
     div.img .imgProduct {
-        width: 50%;
+        width: 60%;
     }
 
     /*Divisão de descrição do produto*/
@@ -257,12 +295,13 @@ section.Benefits {
             font-size: 1em;
             line-height: 1.15em;
             text-align: center;
-            margin-bottom: 1em;
+            margin-bottom: 1.5em;
+            height: 2em;
         }
         .prices{
             display: flex;
             justify-content: center;
-            margin-bottom: 1em;
+            margin-bottom: 1.25em;
         }
         .prices div:not(:first-child) {
             margin-left: 1em;
@@ -306,10 +345,131 @@ section.Benefits {
             font-family: $font-neo;
             color:$sauvignon-default;
             font-weight: 700;
-
+            display: flex;
+            align-items: center;
+            
             span.coin{
-                font-size: .75em;
+                font-size: 1em;
+                align-self: flex-end;
             }
+            div{
+                display: flex;
+                padding-left: 0.15em;
+            }
+            div span:first-child{
+                font-size: 1.25em;
+            }
+            
         }
+
+        p {
+            font-family: $font-lato;
+            font-size: 0.75em;
+            color: $gray;
+            text-align: center;
+            margin:1em 0;
+        }
+    }
+}
+
+
+/*Seção de Podcast*/
+
+.Podcast{
+    background-color: $purple;
+    margin-top:3.5em;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    .imgTitlePodcast{
+        width: 50%;
+        margin: .5em 0 .75em;
+    }
+
+    p{
+        width: 65%;
+        font-family: $font-lato;
+        font-weight: 500;
+        color: $white;
+        font-size: .85em;
+        margin-bottom: 2em;
+    }
+
+    .listPodcast{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 6em;
+        margin-bottom: 2em;
+    }
+    .listPodcast li{
+        width: 50%;
+        padding-left: .5em;
+    }
+    .listPodcast img{
+        width: 100%;
+    }
+    .imgPodcast{
+        background: no-repeat url("../assets/ImgsPodcast/capa-podcast.png");
+        background-size: contain;
+        width: 100%;
+        height: 22em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .imgPodcast img{
+        width: 65%;
+        transition: .5s;
+    }
+    .imgPodcast img:hover{
+        transform: scale(1.15);
+    }
+}
+
+/*Modal*/
+
+.Modal{
+    width: 20em;
+    position: relative;
+    text-align: center;
+    padding: 1.5em 1.5em;
+    height: 20em!important;
+    .btnCloseModal{
+        position: absolute;
+        top: -7.5%;
+        right: -7.5%;
+        background: none;
+    }
+    .btnCloseModal img{
+        width: 95%;
+    }
+    h2{
+        font-family: $font-neo;
+        font-weight: 400;
+        font-size: 1.15em;
+        margin-bottom: 1.5em;
+        color: $gray-dark;
+    }
+    .imgModal{
+        width: 35%;
+        margin-bottom: 1.5em;
+    }
+
+    p,strong{
+        font-family: $font-lato;
+        font-size:.75rem;
+    }
+    strong{
+        font-weight: 700;
+    }
+    p{
+        font-weight: 400;
+        margin-bottom: .5rem;
+        color: $gray-default;
+        padding: 0 1.1em;
     }
 }

@@ -12,12 +12,16 @@ body {
   width: 100vw;
 }
 
-header {
+header, footer {
   text-align: center;
   padding: 0.5em 0;
   background-color: #F5F5F5;
 }
-header .imgLogo {
+header .imgLogo, footer .imgLogo {
+  width: 2.5em;
+}
+
+footer .imgLogo {
   width: 2.5em;
 }
 
@@ -87,7 +91,8 @@ header .imgLogo {
 
 /*Seção Benefícios*/
 section.Benefits {
-  background-color: #EE3E80;
+  background: url("../assets/ImgsBackground/bg-textura-wine.png"), #EE3E80;
+  background-position: top left;
   padding-bottom: 1.5em;
 }
 section.Benefits h2 {
@@ -104,16 +109,16 @@ section.Benefits .listBenefits li {
   padding-bottom: 1em;
 }
 section.Benefits .listBenefits li:nth-child(1) button {
-  background: no-repeat url("/assets/ImgsBackground/tangran-01.png"), #ffffff;
+  background: no-repeat url("../assets/ImgsBackground/tangran-01.png"), #ffffff;
 }
 section.Benefits .listBenefits li:nth-child(2) button {
-  background: no-repeat url("/assets/ImgsBackground/tangran-02.png"), #ffffff;
+  background: no-repeat url("../assets/ImgsBackground/tangran-02.png"), #ffffff;
 }
 section.Benefits .listBenefits li:nth-child(3) button {
-  background: no-repeat url("/assets/ImgsBackground/tangran-03.png"), #ffffff;
+  background: no-repeat url("../assets/ImgsBackground/tangran-03.png"), #ffffff;
 }
 section.Benefits .listBenefits li:nth-child(4) button {
-  background: no-repeat url("/assets/ImgsBackground/tangran-04.png"), #ffffff;
+  background: no-repeat url("../assets/ImgsBackground/tangran-04.png"), #ffffff;
 }
 section.Benefits .listBenefits li button {
   width: 85%;
@@ -148,13 +153,39 @@ section.Benefits .listBenefits li button p {
   text-align: center;
 }
 
+/*Estilizando lista de produto*/
+.listProducts .slick-list {
+  padding: 0 7% !important;
+}
+.listProducts .slick-slide {
+  width: 15em !important;
+  padding: 0 1% 0 0;
+}
+.listProducts li .btnAddProduct {
+  text-align: center;
+  width: 100%;
+  padding: 1em 0;
+  margin-top: 1.25em;
+  background: #7EBC43;
+  font-family: "lato", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  border-radius: 0.25em;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.listProducts li .btnAddProduct:hover {
+  transform: scale(1.05);
+}
+
 /*Estilizando card de produto*/
 .cardItem {
   position: relative;
   border-radius: 0.25em;
   background-color: #ffffff;
-  box-shadow: 0 1px 2px 0 hsla(0deg, 0%, 0%, 0.2);
-  padding: 1em 1.25em;
+  box-shadow: 0 0.1em 0.15em 0 hsla(0deg, 0%, 0%, 0.2);
+  padding: 0.75em 0.75em;
+  width: 100%;
   /*Botão de favoritar*/
   /*Divisão de Flags*/
   /*Divisão da imagem de produto*/
@@ -164,9 +195,10 @@ section.Benefits .listBenefits li button p {
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
 }
 .cardItem .btnFavorite .imgFavorite {
-  width: 2em;
+  width: 1.5em;
   background-color: #ffffff;
 }
 .cardItem .infoProduct {
@@ -192,7 +224,7 @@ section.Benefits .listBenefits li button p {
   justify-content: center;
 }
 .cardItem div.img .imgProduct {
-  width: 50%;
+  width: 60%;
 }
 .cardItem .description {
   margin-top: 1em;
@@ -204,12 +236,13 @@ section.Benefits .listBenefits li button p {
   font-size: 1em;
   line-height: 1.15em;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  height: 2em;
 }
 .cardItem .description .prices {
   display: flex;
   justify-content: center;
-  margin-bottom: 1em;
+  margin-bottom: 1.25em;
 }
 .cardItem .description .prices div:not(:first-child) {
   margin-left: 1em;
@@ -249,9 +282,121 @@ section.Benefits .listBenefits li button p {
   font-family: "neo-sans", sans-serif;
   color: #EE3E80;
   font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 .cardItem .description .priceMember div:nth-child(2) span.coin {
+  font-size: 1em;
+  align-self: flex-end;
+}
+.cardItem .description .priceMember div:nth-child(2) div {
+  display: flex;
+  padding-left: 0.15em;
+}
+.cardItem .description .priceMember div:nth-child(2) div span:first-child {
+  font-size: 1.25em;
+}
+.cardItem .description p {
+  font-family: "lato", sans-serif;
   font-size: 0.75em;
+  color: #888888;
+  text-align: center;
+  margin: 1em 0;
+}
+
+/*Seção de Podcast*/
+.Podcast {
+  background-color: #3C214B;
+  margin-top: 3.5em;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.Podcast .imgTitlePodcast {
+  width: 50%;
+  margin: 0.5em 0 0.75em;
+}
+.Podcast p {
+  width: 65%;
+  font-family: "lato", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 0.85em;
+  margin-bottom: 2em;
+}
+.Podcast .listPodcast {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 6em;
+  margin-bottom: 2em;
+}
+.Podcast .listPodcast li {
+  width: 50%;
+  padding-left: 0.5em;
+}
+.Podcast .listPodcast img {
+  width: 100%;
+}
+.Podcast .imgPodcast {
+  background: no-repeat url("../assets/ImgsPodcast/capa-podcast.png");
+  background-size: contain;
+  width: 100%;
+  height: 22em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Podcast .imgPodcast img {
+  width: 65%;
+  transition: 0.5s;
+}
+.Podcast .imgPodcast img:hover {
+  transform: scale(1.15);
+}
+
+/*Modal*/
+.Modal {
+  width: 20em;
+  position: relative;
+  text-align: center;
+  padding: 1.5em 1.5em;
+  height: 20em !important;
+}
+.Modal .btnCloseModal {
+  position: absolute;
+  top: -7.5%;
+  right: -7.5%;
+  background: none;
+}
+.Modal .btnCloseModal img {
+  width: 95%;
+}
+.Modal h2 {
+  font-family: "neo-sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.15em;
+  margin-bottom: 1.5em;
+  color: #333333;
+}
+.Modal .imgModal {
+  width: 35%;
+  margin-bottom: 1.5em;
+}
+.Modal p, .Modal strong {
+  font-family: "lato", sans-serif;
+  font-size: 0.75rem;
+}
+.Modal strong {
+  font-weight: 700;
+}
+.Modal p {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #555555;
+  padding: 0 1.1em;
 }
 
 /*# sourceMappingURL=style.css.map */

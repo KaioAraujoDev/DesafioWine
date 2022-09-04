@@ -15,7 +15,28 @@ $(document).ready(function() {
 
 function createSliderProducts(){
     $('.listProducts').slick({
-        centerMode:true
+        centerMode:true,
+        centerPadding:'15%',
+        infinite:false
     });
+
+    addEventsSliderProducts();
+    
 } 
 
+function addEventsSliderProducts(){
+    const btnFavorite = document.querySelectorAll('.btnFavorite');
+
+     for(let btn of btnFavorite){
+        btn.addEventListener('click',(event)=>{
+           
+           
+            if(event.target.src.includes('heart-selected')){
+                 event.target.src = "assets/icons/heart.svg"
+            }else{
+                event.target.src = "assets/icons/heart-selected.svg"
+            }
+            
+         })
+     }
+}

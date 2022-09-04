@@ -16,6 +16,10 @@
 
     <link rel="stylesheet" href="resources/slichslider/css/slick.css">
     <link rel="stylesheet" href="resources/slichslider/css/slick-theme.css">
+
+    <!--IziModal-->
+
+    <link rel="stylesheet" href="node_modules/izimodal/css/iziModal.min.css">
 </head>
 
 <body>
@@ -34,7 +38,8 @@
         </section>
         <section class="About">
             <h2>Entenda como funciona: </h2>
-            <p class="aboutDescription">No clube Wine você recebe, todo mês , 2 rótulos escolhidos a dedo das melhores vinícolas do mundo!</p>
+            <p class="aboutDescription">No clube Wine você recebe, todo mês , 2 rótulos escolhidos a dedo das melhores
+                vinícolas do mundo!</p>
             <section class="SliderServices">
                 <div>
                     <img src="assets/Fotos/foto-voce-escolhe.png" alt="Foto - você escolhe">
@@ -47,7 +52,8 @@
                     <img src="assets/Fotos/foto-curadoria.png" alt="Foto - Curadoria">
                     <div class="descriptionPresentation">
                         <h3>Curadoria</h3>
-                        <p>Nossos Winehunters recebem amostras de exemplares e fazem diversas análises para seleção dos melhores vinhos.</p>
+                        <p>Nossos Winehunters recebem amostras de exemplares e fazem diversas análises para seleção dos
+                            melhores vinhos.</p>
                     </div>
                 </div>
                 <div>
@@ -64,7 +70,7 @@
 
             <ul class="listBenefits">
                 <li>
-                    <button>
+                    <button class="btnBenefits" id="discount">
                         <figure>
                             <img src="assets/icons/icone-desconto.png" alt="Icone Desconto">
                         </figure>
@@ -75,7 +81,7 @@
                     </button>
                 </li>
                 <li>
-                    <button>
+                    <button class="btnBenefits" id="cashback">
                         <figure>
                             <img src="assets/icons/icone-cashback.png" alt="Icone de cashback">
                         </figure>
@@ -86,7 +92,7 @@
                     </button>
                 </li>
                 <li>
-                    <button>
+                    <button class="btnBenefits" id="delivery">
                         <figure>
                             <img src="assets/icons/icone-entrega.png" alt="Icone de entrega">
                         </figure>
@@ -97,7 +103,7 @@
                     </button>
                 </li>
                 <li>
-                    <button>
+                    <button class="btnBenefits" id="gifts">
                         <figure>
                             <img src="assets/icons/icone-brindes.png" alt="Icone de brindes">
                         </figure>
@@ -111,6 +117,65 @@
 
         </section>
 
+        <!-- Modals -->
+
+        <div class="Modal" id="discount">
+            <button class="btnCloseModal" id="discount">
+                <img src="assets/icons/close.svg" alt="Fechar">
+            </button>
+            <h2>Desconto em compras na Wine</h2>
+            <div class="imgBenefitsModal">
+                <img class="imgModal" src="assets/iconsModal/icone-desconto-modal.png" alt="Imagem benefício de desconto">
+            </div>
+            <p>
+                Sócio Wine tem <strong>15% de desconto em todas
+                    as compras no site e no app</strong>. Sócios que assinam mais de uma experiência passam a ter 20%.
+                O desconto será aplicado diretamente no carrinho em todas as compras.
+            </p>
+        </div>
+        <div class="Modal" id="cashback">
+            <button class="btnCloseModal" id="cashback">
+                <img src="assets/icons/close.svg" alt="Fechar">
+            </button>
+            <h2>3x mais cashback pelo WineUP</h2>
+            <div class="imgBenefitsModal">
+                <img class="imgModal" src="assets/iconsModal/icone-cashback-modal.png" alt="Imagem benefício de cashback">
+            </div>
+            <p>
+                Sócio Wine ganha 3x mais cashback no programa de recompensas da Wine, o WineUP. A cada compra no site ou
+                APP, você acumula cashback.
+            </p>
+        </div>
+
+        <div class="Modal" id="delivery">
+            <button class="btnCloseModal" id="delivery">
+                <img src="assets/icons/close.svg" alt="Fechar">
+            </button>
+            <h2>Taxa de entrega diferenciada</h2>
+            <div class="imgBenefitsModal">
+                <img class="imgModal" src="assets/iconsModal/icone-entrega-modal.png" alt="Imagem benefício de entrega">
+            </div>
+            <p>
+                Frete gratuito para regiões Sul e Sudeste. Para as demais regiões, a taxa de entrega é diferenciada.
+                Você pode conferir o valor durante o processo de compra após a conclusão de sua assinatura.
+            </p>
+        </div>
+        <div class="Modal" id="gifts">
+            <button class="btnCloseModal" id="gifts">
+                <img src="assets/icons/close.svg" alt="Fechar">
+            </button>
+            <h2>Brindes e cupons no Indique Amigos</h2>
+            <div class="imgBenefitsModal">
+                <img class="imgModal" src="assets/iconsModal/icone-brindes-modal.png" alt="Imagem benefício de brindes">
+            </div>
+            <p>
+                Ao assinar o Clube Wine com seu código, seu amigo e você ganham brinde e cupom de até R$ 100 para usar
+                no site ou APP.
+            </p>
+        </div>
+        
+        <!--Fim modais-->
+
         <section class="Products">
             <h2>Confira nossos vinhos</h2>
             <section class="SliderProducts" id="SliderProducts">
@@ -121,7 +186,7 @@
         <section class="Podcast">
             <h2>
                 <figure>
-                    <img src="assets/Logo/logo-wineverso.svg" alt="Logo WineVerso">
+                    <img class="imgTitlePodcast" src="assets/Logo/logo-wineverso.svg" alt="Logo WineVerso">
                 </figure>
             </h2>
             <p>Fique por dentro dos nossos conteúdos com o Wineverso.</p>
@@ -156,11 +221,14 @@
                 </figure>
             </div>
         </section>
+
     </main>
     <footer>
-        <figure>
-            <img src="assets/Logo/logo-wine.svg" alt="Imagem Logo Wine">
-        </figure>
+        <h1>
+            <figure>
+                <img class="imgLogo" src="assets/Logo/logo-wine.svg" alt="Imagem Logo Wine">
+            </figure>
+        </h1>
     </footer>
 
     <!--Jquery Library-->
@@ -170,8 +238,12 @@
     <!--Slich Slider-->
 
     <script src="resources/slichslider/js/slick.min.js"></script>
-    
+
+    <!--IziModal-->
+    <script src="node_modules/izimodal/js/iziModal.min.js"></script>
+
     <!--My Scripts-->
+    <script src="js/modals.js"></script>
     <script src="js/sliders.js"></script>
     <script src="js/services.js"></script>
     <script src="js/main.js"></script>
