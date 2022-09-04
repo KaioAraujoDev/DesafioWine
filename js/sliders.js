@@ -1,3 +1,6 @@
+const slicksArrow = document.querySelector('button.slick-arrow');
+console.log(slicksArrow);
+
 //Adicionando lógica de slick de apresentação
 
 $(document).ready(function () {
@@ -26,6 +29,7 @@ $(document).ready(function () {
     })
 });
 
+//Slider de serviços 
 
 $(document).ready(function () {
     $('.SliderServices').slick({
@@ -35,6 +39,9 @@ $(document).ready(function () {
         arrows:false
     });
 });
+
+//Slider de produtos 
+//Será chamado quando a API terminar de buscar os produtos
 
 function createSliderProducts() {
     $('.listProducts').slick({
@@ -47,6 +54,8 @@ function createSliderProducts() {
     addEventsSliderProducts();
 
 }
+
+//Evento de produto favorito
 
 function addEventsSliderProducts() {
     const btnFavorite = document.querySelectorAll('.btnFavorite');
@@ -66,21 +75,17 @@ function addEventsSliderProducts() {
 }
 
 //Eventos multimedia javascript
-
+//O valor de breakpoint será exatamente o tamanho do dispositivo utilizado
 
 function changeBackground(match){
     if(match.matches){
         $('#banner01')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-01-desktop.png" 
         $('#banner02')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-02-desktop.png"
         $('#banner03')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-03-desktop.png"     
-        $('button.slick-prev.slick-arrow')[0].innerText="";
-        $('button.slick-next.slick-arrow')[0].innerText="";
     }else{
         $('#banner01')[0].attributes.src.nodeValue = "assets/bannersMobile/banner-01-mobile.png" 
         $('#banner02')[0].attributes.src.nodeValue = "assets/bannersMobile/banner-02-mobile.png"
         $('#banner03')[0].attributes.src.nodeValue = "assets/bannersMobile/banner-03-mobile.png"     
-        $('button.slick-prev.slick-arrow')[0].innerText="";
-        $('button.slick-next.slick-arrow')[0].innerText="";
     }
 }
 
