@@ -37,7 +37,10 @@ function displayProducts(products){
                 
                 <div class="prices">
                     <div class="priceDiscount">
-                        R$${product.price}
+                        R$${
+                           
+                            formatValue(product.price)
+                        }
                     </div>
                     <div class="Discount">   
                         ${product.discount}% OFF
@@ -48,18 +51,33 @@ function displayProducts(products){
                     <div>
                         SÓCIO WINE
                     </div>
-                    <div>
-                        <span class="coin">R$</span>${product.priceMember}
+                    <div class="price">
+                        <span class="coin">R$</span>
+                        <div>
+                            <span>${formatValue(product.priceMember).substring(0,formatValue(product.priceMember). length - 2)}</span>
+                            <span class="cents">
+                            ${ formatValue(product.priceMember).trim().substring(formatValue(product.priceMember). length - 2, formatValue(product.priceMember).length)}
+                            </span>
+                        </div>
                     </div>
                 </div>
 
-                <p>NÃO SÓCIO R$${product.priceNonMember}</p>
+                <p>NÃO SÓCIO R$${ formatValue(product.priceNonMember)}</p>
             </div>
         </section>
         
-        <button>Adicionar</button>
+        <button class="btnAddProduct">Adicionar</button>
         `;
         list.appendChild(item);
     }
     
 }
+
+function formatValue(value){
+    let valueFormated = value.toFixed(2).toString();
+    valueFormated = valueFormated.replace('.' , ',');
+    
+    return valueFormated.trim();
+}
+
+
