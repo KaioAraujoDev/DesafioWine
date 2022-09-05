@@ -137,20 +137,24 @@ footer .imgLogo{
 }
 
 /*Estilização de Arrows sliders */
+.slick-prev,.slick-next{
+    cursor: pointer;
+}
 .slick-prev{
     position: absolute;
     z-index: 1;
-    top: 35%;
+    top: 40%;
     bottom: 0;
     left: 15%;
     background: no-repeat url("../assets/icons/arrow-left.svg");
     width: 48px;
     font-size: 0;
+
 }
 .slick-next{
     position: absolute;
     z-index: 1;
-    top: 35%;
+    top: 40%;
     right: 15%;
     bottom: 0;
     background: no-repeat url("../assets/icons/arrow-right.svg");
@@ -489,12 +493,18 @@ section.Benefits {
 
 .Podcast{
     background-color: $purple;
-    padding: 1.5em;
+    padding: 10% 5% 10% 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     
+    .headerPodcast{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .imgTitlePodcast{
         width: 50%;
         margin: .5em 0 .75em;
@@ -512,25 +522,32 @@ section.Benefits {
     .listPodcast{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         flex-wrap: wrap;
-        height: 6em;
-        margin-bottom: 2em;
+        height: 6.5em;
+        margin-bottom: 1.5em;
+        width: 21em;
     }
     .listPodcast li{
-        width: 50%;
-        padding-left: .5em;
+        width: 10em;
     }
     .listPodcast img{
         width: 100%;
+        transition: .5s;
+        cursor: pointer;
     }
+    .listPodcast img:hover{
+        transform:scale(1.05);
+    }   
     .imgPodcast{
         background: no-repeat url("../assets/ImgsPodcast/capa-podcast.png");
-        background-size: contain;
-        width: 100%;
-        height: 22em;
+        background-size: cover;
+        width: 21em;
+        height: 21em;
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
     }
     .imgPodcast img{
         width: 65%;
@@ -554,7 +571,9 @@ section.Benefits {
         top: -7.5%;
         right: -7.5%;
         background: none;
+        cursor: pointer;
     }
+    
     .btnCloseModal img{
         width: 95%;
     }
@@ -592,26 +611,35 @@ section.Benefits {
     header .imgLogo,
     footer .imgLogo
     {
-        width: 3em;
+        width: 4em;
+        padding: .25em 0;
     }
 
+    
     /*Seção sobre*/
 
     .About{
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+      
+        h2{
+            font-size: 2em;
+        }
         .aboutDescription{
-            width: 25%;
+            width: 35%;
+            font-size: 1.15em;
         }
     }
     .SliderServices{
         display: flex;
         justify-content: center;
+
+        
+
         div {
-            width: 13.5%;
-            margin: 0 1%;
+            width: 15em;
+            margin: 0 1em;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -623,14 +651,56 @@ section.Benefits {
     }
 
     /*Seção Benefícios*/
-
+    section.Benefits{
+        padding-bottom: 3em;
+        h2{
+            font-size: 2em;
+        }
+    }
     .listBenefits{
         display: flex;
         align-items: center;
         justify-content: center;
+
     }
+  
     .listBenefits li{
         display: inline-block;
-        width: 20%;
+        width: 22em;
+    }
+
+    /*Seção de produtos*/
+    .Products h2{
+        font-size: 2em;
+    }
+    .listProducts{
+        display: flex;
+        justify-content: center;
+    }
+    .listProducts li{
+        width: 13em;
+        margin-left: 1.5em;
+    }
+    /*Seção de podcast*/
+
+    .Podcast{
+        flex-direction: row;
+        justify-content: center;
+        padding: 5%;
+    }
+    .Podcast .headerPodcast{
+        width: 30%;
+        margin-right: 2.5%;
+    }
+    .Podcast .headerPodcast p{
+        width: 85%;
+        text-align: start;
+    }
+    .Podcast .imgPodcast{
+        width: 25em;
+        height: 25em;
+    }
+    .Podcast .imgTitlePodcast{
+        width: 75%;
     }
 }

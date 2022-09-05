@@ -5,55 +5,46 @@ $(document).ready(function () {
     $('.SliderPresentation').slick({
         autoplay: true,
         dots: false,
-        arrows:true,
+        arrows: true,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
                     dots: true,
-                    arrows:false,
+                    arrows: false,
                 }
             }
         ]
     });
 
-    //Evento ao atingir o breakpoint
-
-    $('.SliderPresentation').on('breakpoint', (event , slick ,breakpoint)=>{
-        if(breakpoint === null){
-          
-        }else{
-            
-        }
-
-    })
 });
 
 //Slider de serviços 
 
-function createSlideServices(){
+function createSlideServices() {
     $('.SliderServices').slick({
         centerMode: true,
         centerPadding: '12.5%',
         dots: true,
-        arrows:false
+        arrows: false,
     });
 }
-   
 
 //Slider de produtos 
 //Será chamado quando a API terminar de buscar os produtos
 
 function createSliderProducts() {
+
     $('.listProducts').slick({
         centerMode: true,
         centerPadding: '15%',
         infinite: false,
-        arrows:false
+        arrows: false,
+        unslick:false
     });
-
+    //Verificar a necessidade de alterar o comportamento de responsividade
+    
     addEventsSliderProducts();
-
 }
 
 //Evento de produto favorito
@@ -79,26 +70,63 @@ function addEventsSliderProducts() {
 //O valor de breakpoint será exatamente o tamanho do dispositivo utilizado
 
 
-function changeBackground(match){
-    console.log('match');
-    if(match.matches){
-        
-        $('#banner01')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-01-desktop.png" 
-        $('#banner02')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-02-desktop.png"
-        $('#banner03')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-03-desktop.png"     
-    }else{
-        $('#banner01')[0].attributes.src.nodeValue = "assets/bannersMobile/banner-01-mobile.png" 
+function changeBackground(match) {
+    if (match.matches) {
+        $('#banner01')[0].attributes.src.nodeValue = "assets/bannersMobile/banner-01-mobile.png"
         $('#banner02')[0].attributes.src.nodeValue = "assets/bannersMobile/banner-02-mobile.png"
-        $('#banner03')[0].attributes.src.nodeValue = "assets/bannersMobile/banner-03-mobile.png"     
+        $('#banner03')[0].attributes.src.nodeValue = "assets/bannersMobile/banner-03-mobile.png"
+
+    } else {
+        $('#banner01')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-01-desktop.png"
+        $('#banner02')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-02-desktop.png"
+        $('#banner03')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-03-desktop.png"
     }
 }
 
-const mmObjMin = window.matchMedia("(min-width:1024px)");
-const mmObjMax = window.matchMedia("(max-width:1023px)");
 
-changeBackground(mmObjMin);
+function changeSliderServices(match) {
+    //Se a largura for no máximo 1024 crie slider
+    if (match.matches) {
+        createSlideServices();
+    } else {
+        //Remova slider
+        $('.SliderServices').slick('unslick');
+      
+    }
+    
+}
 
-mmObjMin.addEventListener(changeBackground());
+function changeSliderProducts(match) {
+    if (match.matches) {
+        createSliderProducts();
+    } else {
+        $(".listProducts").slick('unslick');
+    }
+}
 
-mmObjMax.addEventListener(createSlideServices());
 
+
+//Objeto multimedia irá servir de referencia ao tamanho de tela atua do dispositivo
+
+const mmObjMax = window.matchMedia("(max-width: 1024px)");
+const mmObjMin = window.matchMedia("(min-width: 1025px)");
+
+
+changeBackground(mmObjMax);
+changeSliderServices(mmObjMax);
+
+mmObjMax.addEventListener('change', () => {
+    changeBackground(mmObjMax);
+});
+
+mmObjMax.addEventListener('change', () => {
+    changeSliderServices(mmObjMax);
+});
+
+ mmObjMax.addEventListener('change', () => {
+    changeDescriptionPodcast(mmObjMin);
+ });
+
+ mmObjMax.addEventListener('change', () => {
+    changeSliderProducts(mmObjMax);
+ });

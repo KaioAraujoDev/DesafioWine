@@ -72,6 +72,7 @@ function displayProducts(products){
     }
     
 }
+//Formatando valor de preço do produto
 
 function formatValue(value){
     let valueFormated = value.toFixed(2).toString();
@@ -80,4 +81,11 @@ function formatValue(value){
     return valueFormated.trim();
 }
 
-
+//Função para alterar 
+function changeDescriptionPodcast(match) {
+    if (match.matches) {
+        $('#descriptionPodcast')[0].innerText = 'Fique por dentro dos nossos conteúdos através do Podcast da Wine, o Wineverso. Aproveite para abrir um delicioso vinho e aperte o play para desbravar as curiosidades deste universo com a gente neste período em casa!';
+    }else{
+        $('#descriptionPodcast')[0].innerText = 'Fique por dentro dos nossos conteúdos com o Wineverso.';
+    }   
+}
