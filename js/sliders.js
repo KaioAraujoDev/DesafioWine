@@ -1,5 +1,3 @@
-const slicksArrow = document.querySelector('button.slick-arrow');
-console.log(slicksArrow);
 
 //Adicionando lógica de slick de apresentação
 
@@ -23,7 +21,9 @@ $(document).ready(function () {
 
     $('.SliderPresentation').on('breakpoint', (event , slick ,breakpoint)=>{
         if(breakpoint === null){
-         
+          
+        }else{
+            
         }
 
     })
@@ -31,14 +31,15 @@ $(document).ready(function () {
 
 //Slider de serviços 
 
-$(document).ready(function () {
+function createSlideServices(){
     $('.SliderServices').slick({
         centerMode: true,
         centerPadding: '12.5%',
         dots: true,
         arrows:false
     });
-});
+}
+   
 
 //Slider de produtos 
 //Será chamado quando a API terminar de buscar os produtos
@@ -77,8 +78,11 @@ function addEventsSliderProducts() {
 //Eventos multimedia javascript
 //O valor de breakpoint será exatamente o tamanho do dispositivo utilizado
 
+
 function changeBackground(match){
+    console.log('match');
     if(match.matches){
+        
         $('#banner01')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-01-desktop.png" 
         $('#banner02')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-02-desktop.png"
         $('#banner03')[0].attributes.src.nodeValue = "assets/bannersDesktop/banner-03-desktop.png"     
@@ -89,9 +93,12 @@ function changeBackground(match){
     }
 }
 
-const mmObj = window.matchMedia("(min-width:1024px)")
+const mmObjMin = window.matchMedia("(min-width:1024px)");
+const mmObjMax = window.matchMedia("(max-width:1023px)");
 
+changeBackground(mmObjMin);
 
-changeBackground(mmObj);
+mmObjMin.addEventListener(changeBackground());
 
-mmObj.addEventListener(changeBackground);
+mmObjMax.addEventListener(createSlideServices());
+

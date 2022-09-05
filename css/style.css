@@ -495,10 +495,44 @@ section.Benefits .listBenefits li button p {
   padding: 0 1.1em;
 }
 
-@media screen and (min-width: 1024px) {
+/*Responsividade*/
+@media screen and (min-width: 1023px) {
   header .imgLogo,
 footer .imgLogo {
     width: 3em;
+  }
+  /*Seção sobre*/
+  .About {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .About .aboutDescription {
+    width: 25%;
+  }
+  .SliderServices {
+    display: flex;
+    justify-content: center;
+  }
+  .SliderServices div {
+    width: 13.5%;
+    margin: 0 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .SliderServices .descriptionPresentation {
+    width: 100%;
+  }
+  /*Seção Benefícios*/
+  .listBenefits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .listBenefits li {
+    display: inline-block;
+    width: 20%;
   }
 }
 
