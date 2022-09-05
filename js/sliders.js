@@ -81,6 +81,9 @@ function changeBackground(match) {
 }
 
 
+//Verificando a necessidade de adição ou remoção de slides de acordo com a tela
+//Serviços
+
 function changeSliderServices(match) {
     //Se a largura for no máximo 1024 crie slider
     if (match.matches) {
@@ -95,17 +98,21 @@ function changeSliderServices(match) {
     
 }
 
+//Verificando a necessidade de adição ou remoção de slides de acordo com a tela
+//Produtos
+
 function changeSliderProducts(match) {
     if (match.matches) {
         createSliderProducts();
-        //  //Verificar a necessidade de alterar o comportamento de responsividade
-        addEventsSliderProducts();
+    
     } else {
         $(".listProducts").slick('unslick');
     }
 }
 
-//Função para alterar 
+
+//Verificando a necessidade de alterar o conteúdo de acordo com a tela
+//Podcast
 function changeDescriptionPodcast(match) {
     if (match.matches) {
         $('#descriptionPodcast')[0].innerText = 'Fique por dentro dos nossos conteúdos através do Podcast da Wine, o Wineverso. Aproveite para abrir um delicioso vinho e aperte o play para desbravar as curiosidades deste universo com a gente neste período em casa!';
@@ -115,15 +122,17 @@ function changeDescriptionPodcast(match) {
 }
 
 
-//Objeto multimedia irá servir de referencia ao tamanho de tela atua do dispositivo
+//Objeto multimedia irá servir de referência ao tamanho de tela atua do dispositivo
 const mmObjMax = window.matchMedia("(max-width: 900px)");
 const mmObjMin = window.matchMedia("(min-width: 901px)");
 
-
+//Verificando inicialmente se é preciso alterar algum conteúdo	
 changeBackground(mmObjMax);
 changeSliderServices(mmObjMax);
 changeDescriptionPodcast(mmObjMin);
 
+
+//Adicionando eventos de mudança de media
 
 mmObjMax.addEventListener('change', () => {
     changeBackground(mmObjMax);

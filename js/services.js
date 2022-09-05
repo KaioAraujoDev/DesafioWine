@@ -10,10 +10,10 @@ function FindProductsApi() {
             displayProducts(result);
             if(mmObjMax.matches){
                 createSliderProducts();
-            }else{
-                addEventsSliderProducts();
             }
-           
+
+            addEventsSliderProducts();
+            
         })
         .catch(err => {
             alert("Não foi possível estabelecer uma conexão com a API.  \n" + err);
