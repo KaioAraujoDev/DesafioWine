@@ -8,7 +8,7 @@ $(document).ready(function () {
         arrows: true,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 900,
                 settings: {
                     dots: true,
                     arrows: false,
@@ -42,9 +42,7 @@ function createSliderProducts() {
         arrows: false,
         unslick:false
     });
-    //Verificar a necessidade de alterar o comportamento de responsividade
-    
-    addEventsSliderProducts();
+ 
 }
 
 //Evento de produto favorito
@@ -54,7 +52,6 @@ function addEventsSliderProducts() {
 
     for (let btn of btnFavorite) {
         btn.addEventListener('click', (event) => {
-
 
             if (event.target.src.includes('heart-selected')) {
                 event.target.src = "assets/icons/heart.svg"
@@ -90,8 +87,10 @@ function changeSliderServices(match) {
         createSlideServices();
     } else {
         //Remova slider
-        $('.SliderServices').slick('unslick');
-      
+            if( $('.SliderServices')[0].classList.contains('slick-initialized')){
+                $('.SliderServices').slick('unslick');
+            }
+    
     }
     
 }
@@ -99,21 +98,32 @@ function changeSliderServices(match) {
 function changeSliderProducts(match) {
     if (match.matches) {
         createSliderProducts();
+        //  //Verificar a necessidade de alterar o comportamento de responsividade
+        addEventsSliderProducts();
     } else {
         $(".listProducts").slick('unslick');
     }
 }
 
+//Função para alterar 
+function changeDescriptionPodcast(match) {
+    if (match.matches) {
+        $('#descriptionPodcast')[0].innerText = 'Fique por dentro dos nossos conteúdos através do Podcast da Wine, o Wineverso. Aproveite para abrir um delicioso vinho e aperte o play para desbravar as curiosidades deste universo com a gente neste período em casa!';
+    }else{
+        $('#descriptionPodcast')[0].innerText = 'Fique por dentro dos nossos conteúdos com o Wineverso.';
+    }   
+}
 
 
 //Objeto multimedia irá servir de referencia ao tamanho de tela atua do dispositivo
-
-const mmObjMax = window.matchMedia("(max-width: 1024px)");
-const mmObjMin = window.matchMedia("(min-width: 1025px)");
+const mmObjMax = window.matchMedia("(max-width: 900px)");
+const mmObjMin = window.matchMedia("(min-width: 901px)");
 
 
 changeBackground(mmObjMax);
 changeSliderServices(mmObjMax);
+changeDescriptionPodcast(mmObjMin);
+
 
 mmObjMax.addEventListener('change', () => {
     changeBackground(mmObjMax);

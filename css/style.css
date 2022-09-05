@@ -514,7 +514,7 @@ section.Benefits .listBenefits li button p {
 }
 
 /*Responsividade*/
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 900px) {
   header .imgLogo,
 footer .imgLogo {
     width: 4em;
