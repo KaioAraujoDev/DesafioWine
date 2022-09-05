@@ -8,6 +8,7 @@
   list-style: none;
 }
 
+/*Body header e Footer*/
 body {
   width: 100vw;
 }
@@ -25,7 +26,7 @@ footer .imgLogo {
   width: 2.5em;
 }
 
-/* Estilização Dots */
+/* Estilização Dots de Slider */
 /* .slick-dotted.slick-slider
 {
     margin-bottom: 30px;

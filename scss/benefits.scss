@@ -1,0 +1,61 @@
+/*Seção Benefícios*/
+
+section.Benefits {
+    background: url("../assets/ImgsBackground/bg-textura-wine.png"),$sauvignon-default;
+    background-position: top left;
+    padding-bottom: 1.5em;
+
+    h2 {
+        font-family: $font-neo;
+        font-weight: 700;
+        color: $white;
+        text-align: center;
+        padding: 2em 0;
+        font-size: 1.5em;
+    }
+
+    .listBenefits li {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1em;
+    }
+
+    .listBenefits li:nth-child(1) button {
+        background: no-repeat url("../assets/ImgsBackground/tangran-01.png"), $white ;
+    }
+
+    .listBenefits li:nth-child(2) button {
+        background: no-repeat url("../assets/ImgsBackground/tangran-02.png"), $white ;
+    }
+
+    .listBenefits li:nth-child(3) button {
+        background: no-repeat url("../assets/ImgsBackground/tangran-03.png"), $white ;
+    }
+
+    .listBenefits li:nth-child(4) button {
+        background: no-repeat url("../assets/ImgsBackground/tangran-04.png"), $white ;
+    }
+
+    .listBenefits li button {
+        width: 85%;
+        display: flex;
+        padding: 1em 0;
+        border-radius: .5em;
+        align-items: center;
+        justify-content: flex-end;
+        background-position: top left;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .listBenefits li:hover button {
+        transform: scale(1.05);
+    }
+
+    .listBenefits li button p {
+        width: 45%;
+        margin-left: 7.5%;
+        text-align: start;
+        color: $gray-default;
+    }
+}

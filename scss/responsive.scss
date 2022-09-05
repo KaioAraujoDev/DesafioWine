@@ -1,0 +1,100 @@
+/*Responsividade*/
+
+@media screen and (min-width:1023px) {
+
+    header .imgLogo,
+    footer .imgLogo
+    {
+        width: 4em;
+        padding: .25em 0;
+    }
+
+    
+    /*Seção sobre*/
+
+    .About{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+        h2{
+            font-size: 2em;
+        }
+        .aboutDescription{
+            width: 35%;
+            font-size: 1.15em;
+        }
+    }
+    .SliderServices{
+        display: flex;
+        justify-content: center;
+
+        
+
+        div {
+            width: 15em;
+            margin: 0 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+       
+        .descriptionPresentation{
+            width: 100%;
+        }
+    }
+
+    /*Seção Benefícios*/
+    section.Benefits{
+        padding-bottom: 3em;
+        h2{
+            font-size: 2em;
+        }
+    }
+    .listBenefits{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+  
+    .listBenefits li{
+        display: inline-block;
+        width: 22em;
+    }
+
+    /*Seção de produtos*/
+    .Products h2{
+        font-size: 2em;
+    }
+    .listProducts{
+        display: flex;
+        justify-content: center;
+    }
+    .listProducts li{
+        width: 13em;
+        margin-left: 1.5em;
+    }
+    /*Seção de podcast*/
+
+    .Podcast{
+        flex-direction: row;
+        justify-content: center;
+        padding: 5%;
+    }
+    .Podcast .headerPodcast{
+        width: 30%;
+        margin-right: 2.5%;
+    }
+    .Podcast .headerPodcast p{
+        width: 85%;
+        text-align: start;
+    }
+    .Podcast .imgPodcast{
+        width: 25em;
+        height: 25em;
+    }
+    .Podcast .imgTitlePodcast{
+        width: 75%;
+    }
+}
