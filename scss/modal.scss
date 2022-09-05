@@ -1,0 +1,45 @@
+/*Modal*/
+
+.Modal{
+    width: 20em;
+    position: relative;
+    text-align: center;
+    padding: 1.5em 1.5em;
+    height: 20em!important;
+    .btnCloseModal{
+        position: absolute;
+        top: -7.5%;
+        right: -7.5%;
+        background: none;
+        cursor: pointer;
+    }
+    
+    .btnCloseModal img{
+        width: 95%;
+    }
+    h2{
+        font-family: $font-neo;
+        font-weight: 400;
+        font-size: 1.15em;
+        margin-bottom: 1.5em;
+        color: $gray-dark;
+    }
+    .imgModal{
+        width: 35%;
+        margin-bottom: 1.5em;
+    }
+
+    p,strong{
+        font-family: $font-lato;
+        font-size:.75rem;
+    }
+    strong{
+        font-weight: 700;
+    }
+    p{
+        font-weight: 400;
+        margin-bottom: .5rem;
+        color: $gray-default;
+        padding: 0 1.1em;
+    }
+}

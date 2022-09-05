@@ -1,0 +1,69 @@
+
+//Seção como funciona
+
+.About {
+    padding-bottom: 2.5em;
+    background-color: $background;
+
+    h2 {
+        font-family: $font-neo;
+        text-align: center;
+        font-weight: 700;
+        color: $gray-dark;
+        padding: 1.5em 0 .75em 0;
+        font-size: 1.5em;
+    }
+
+    .aboutDescription {
+        font-family: $font-lato;
+        line-height: 1.15em;
+        color: $gray-default;
+        text-align: center;
+        margin: 0 1.5em 2em 1.5em;
+    }
+
+
+}
+
+/*Slider -  Como funciona */
+
+.SliderServices {
+    padding: 1.5em 0 2em;
+
+    div {
+        padding: 0 .75%;
+    }
+
+    div img {
+        width: 100%;
+    }
+
+    .descriptionPresentation h3 {
+        text-align: center;
+        font-family: $font-neo;
+        color: $sauvignon-default;
+        font-weight: 500;
+        font-size: 1.35em;
+        margin: 1em 0;
+    }
+
+    .descriptionPresentation p {
+        font-family: $font-lato;
+        color: $gray-default;
+        line-height: 1.5em;
+        text-align: center;
+        font-size: .85em;
+    }
+
+    .slick-dots {
+        bottom: -.5em;
+    }
+
+    .slick-dots li button:before {
+        background-color: $gray-over;
+    }
+
+    .slick-dots li.slick-active button:before {
+        background-color: $sauvignon-default;
+    }
+}

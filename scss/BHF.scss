@@ -1,0 +1,19 @@
+/*Body header e Footer*/
+body {
+    width: 100vw;
+}
+
+
+header , footer{
+    text-align: center;
+    padding: .5em 0;
+    background-color: $background;
+
+    .imgLogo {
+        width: 2.5em;
+    }
+}
+
+footer .imgLogo{
+    width: 2.5em;
+}

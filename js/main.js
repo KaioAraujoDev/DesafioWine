@@ -72,6 +72,7 @@ function displayProducts(products){
     }
     
 }
+//Formatando valor de preço do produto
 
 function formatValue(value){
     let valueFormated = value.toFixed(2).toString();

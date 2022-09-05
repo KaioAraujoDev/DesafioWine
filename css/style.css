@@ -8,6 +8,7 @@
   list-style: none;
 }
 
+/*Body header e Footer*/
 body {
   width: 100vw;
 }
@@ -25,7 +26,7 @@ footer .imgLogo {
   width: 2.5em;
 }
 
-/* Estilização Dots */
+/* Estilização Dots de Slider */
 /* .slick-dotted.slick-slider
 {
     margin-bottom: 30px;
@@ -98,10 +99,14 @@ footer .imgLogo {
 }
 
 /*Estilização de Arrows sliders */
+.slick-prev, .slick-next {
+  cursor: pointer;
+}
+
 .slick-prev {
   position: absolute;
   z-index: 1;
-  top: 35%;
+  top: 40%;
   bottom: 0;
   left: 15%;
   background: no-repeat url("../assets/icons/arrow-left.svg");
@@ -112,7 +117,7 @@ footer .imgLogo {
 .slick-next {
   position: absolute;
   z-index: 1;
-  top: 35%;
+  top: 40%;
   right: 15%;
   bottom: 0;
   background: no-repeat url("../assets/icons/arrow-right.svg");
@@ -404,11 +409,16 @@ section.Benefits .listBenefits li button p {
 /*Seção de Podcast*/
 .Podcast {
   background-color: #3C214B;
-  padding: 1.5em;
+  padding: 10% 5% 10% 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+.Podcast .headerPodcast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .Podcast .imgTitlePodcast {
   width: 50%;
@@ -425,25 +435,32 @@ section.Benefits .listBenefits li button p {
 .Podcast .listPodcast {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  height: 6em;
-  margin-bottom: 2em;
+  height: 6.5em;
+  margin-bottom: 1.5em;
+  width: 21em;
 }
 .Podcast .listPodcast li {
-  width: 50%;
-  padding-left: 0.5em;
+  width: 10em;
 }
 .Podcast .listPodcast img {
   width: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.Podcast .listPodcast img:hover {
+  transform: scale(1.05);
 }
 .Podcast .imgPodcast {
   background: no-repeat url("../assets/ImgsPodcast/capa-podcast.png");
-  background-size: contain;
-  width: 100%;
-  height: 22em;
+  background-size: cover;
+  width: 21em;
+  height: 21em;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .Podcast .imgPodcast img {
   width: 65%;
@@ -466,6 +483,7 @@ section.Benefits .listBenefits li button p {
   top: -7.5%;
   right: -7.5%;
   background: none;
+  cursor: pointer;
 }
 .Modal .btnCloseModal img {
   width: 95%;
@@ -495,10 +513,88 @@ section.Benefits .listBenefits li button p {
   padding: 0 1.1em;
 }
 
-@media screen and (min-width: 1024px) {
+/*Responsividade*/
+@media screen and (min-width: 900px) {
   header .imgLogo,
 footer .imgLogo {
-    width: 3em;
+    width: 4em;
+    padding: 0.25em 0;
+  }
+  /*Seção sobre*/
+  .About {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .About h2 {
+    font-size: 2em;
+  }
+  .About .aboutDescription {
+    width: 35%;
+    font-size: 1.15em;
+  }
+  .SliderServices {
+    display: flex;
+    justify-content: center;
+  }
+  .SliderServices div {
+    width: 15em;
+    margin: 0 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .SliderServices .descriptionPresentation {
+    width: 100%;
+  }
+  /*Seção Benefícios*/
+  section.Benefits {
+    padding-bottom: 3em;
+  }
+  section.Benefits h2 {
+    font-size: 2em;
+  }
+  .listBenefits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .listBenefits li {
+    display: inline-block;
+    width: 22em;
+  }
+  /*Seção de produtos*/
+  .Products h2 {
+    font-size: 2em;
+  }
+  .listProducts {
+    display: flex;
+    justify-content: center;
+  }
+  .listProducts li {
+    width: 13em;
+    margin-left: 1.5em;
+  }
+  /*Seção de podcast*/
+  .Podcast {
+    flex-direction: row;
+    justify-content: center;
+    padding: 5%;
+  }
+  .Podcast .headerPodcast {
+    width: 30%;
+    margin-right: 2.5%;
+  }
+  .Podcast .headerPodcast p {
+    width: 85%;
+    text-align: start;
+  }
+  .Podcast .imgPodcast {
+    width: 25em;
+    height: 25em;
+  }
+  .Podcast .imgTitlePodcast {
+    width: 75%;
   }
 }
 

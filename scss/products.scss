@@ -1,0 +1,181 @@
+/*Seção produtos*/
+
+.Products {
+    background-color: $background;
+    padding-bottom: 3em;
+
+    h2 {
+        font-family: $font-neo;
+        font-size: 1.5em;
+        font-weight: 700;
+        padding: 1.5em 0;
+        text-align: center;
+    }
+
+}
+
+/*Estilizando lista de produto*/
+.listProducts{
+    .slick-list{
+        padding: 0 7% !important;
+    }
+    .slick-slide{
+        width: 15em!important;
+        padding: 0 1% 0 0;
+    }
+    li .btnAddProduct{
+        text-align: center;
+        width: 100%;
+        padding: 1em 0;
+        margin-top: 1.25em;
+        background: $success-default;
+        font-family: $font-lato;
+        font-weight: 700;
+        color: $white;
+        border-radius: 0.25em;
+        transition: .5s;
+        cursor: pointer;
+    }
+    li .btnAddProduct:hover{
+        transform: scale(1.05);
+    }
+}
+/*Estilizando card de produto*/
+
+.cardItem {
+    position: relative;
+    border-radius: .25em;
+    background-color: $white;
+    box-shadow: 0 .1em .15em 0 $shadow;
+    padding: 0.75em 0.75em;
+    width: 100%;
+
+    /*Botão de favoritar*/
+    .btnFavorite{
+        position: absolute;
+        top:0;
+        right: 0;
+        cursor: pointer;
+    }
+    .btnFavorite .imgFavorite{
+        width: 1.5em;
+        background-color: $white;
+    }
+
+    /*Divisão de Flags*/
+
+    .infoProduct{
+        position: absolute;
+        bottom: .75em;
+        left: 0;
+        
+    }
+    .flag {
+        width: 1.15em;
+    }
+    .infoFlag{
+        background-color: $sauvignon-default;
+        width: 1.15em;
+        height: 1.15em;
+        border-radius: 100%;
+        margin-bottom: .5em;
+    }
+
+    /*Divisão da imagem de produto*/
+    div.img {   
+        position: relative;
+    }
+    div.img .figureImgProduct{
+        display: flex;
+        justify-content: center;
+    }
+    div.img .imgProduct {
+        width: 60%;
+    }
+
+    /*Divisão de descrição do produto*/
+
+    .description{
+        margin-top:1em;
+        h3{
+            font-family: $font-lato;
+            font-weight: 700;
+            font-size: 1em;
+            line-height: 1.15em;
+            text-align: center;
+            margin-bottom: 1.5em;
+            height: 2em;
+        }
+        .prices{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.25em;
+        }
+        .prices div:not(:first-child) {
+            margin-left: 1em;
+        }
+        /* Preço com desconto */
+        .prices .priceDiscount{
+            font-family: $font-lato;
+            font-weight: 600;
+            font-size: .85em;
+            color: $gray-default;
+            text-decoration: line-through;
+        }
+
+        .prices .Discount{
+            font-family: $font-lato;
+            font-size: .75em;
+            font-weight: 400;
+            background-color: $sauvignon-default;
+            padding: .15em .5em;
+            border-radius: .15em;
+            color: $white;
+        }
+
+        .priceMember{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .priceMember div:first-child{
+            font-family: $font-lato;
+            font-weight: 300;
+            color: $gray-default;
+            font-size: .75em;
+            line-height: 1em;
+            width: 20%;
+            text-align: end;
+            margin-right: .5em;
+        }
+        .priceMember div:nth-child(2){
+            font-family: $font-neo;
+            color:$sauvignon-default;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            
+            span.coin{
+                font-size: 1em;
+                align-self: flex-end;
+            }
+            div{
+                display: flex;
+                padding-left: 0.15em;
+            }
+            div span:first-child{
+                font-size: 1.25em;
+            }
+            
+        }
+
+        p {
+            font-family: $font-lato;
+            font-size: 0.75em;
+            color: $gray;
+            text-align: center;
+            margin:1em 0;
+        }
+    }
+}

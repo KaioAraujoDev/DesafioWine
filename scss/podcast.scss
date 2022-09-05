@@ -1,0 +1,68 @@
+/*Seção de Podcast*/
+
+.Podcast{
+    background-color: $purple;
+    padding: 10% 5% 10% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    .headerPodcast{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgTitlePodcast{
+        width: 50%;
+        margin: .5em 0 .75em;
+    }
+
+    p{
+        width: 65%;
+        font-family: $font-lato;
+        font-weight: 500;
+        color: $white;
+        font-size: .85em;
+        margin-bottom: 2em;
+    }
+
+    .listPodcast{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 6.5em;
+        margin-bottom: 1.5em;
+        width: 21em;
+    }
+    .listPodcast li{
+        width: 10em;
+    }
+    .listPodcast img{
+        width: 100%;
+        transition: .5s;
+        cursor: pointer;
+    }
+    .listPodcast img:hover{
+        transform:scale(1.05);
+    }   
+    .imgPodcast{
+        background: no-repeat url("../assets/ImgsPodcast/capa-podcast.png");
+        background-size: cover;
+        width: 21em;
+        height: 21em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .imgPodcast img{
+        width: 65%;
+        transition: .5s;
+    }
+    .imgPodcast img:hover{
+        transform: scale(1.15);
+    }
+}

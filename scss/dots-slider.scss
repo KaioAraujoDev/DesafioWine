@@ -1,0 +1,129 @@
+/* Estilização Dots de Slider */
+
+    /* .slick-dotted.slick-slider
+    {
+        margin-bottom: 30px;
+    } */
+
+    .slick-dots
+    {
+        position: absolute;
+        bottom: .5em;
+    
+        display: block;
+    
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    
+        list-style: none;
+    
+        text-align: center;
+    }
+    .slick-dots li
+    {
+        position: relative;
+    
+        display: inline-block;
+    
+        margin:0 0 0 .15em;
+        width: 1.25em;
+        height: 1.25em;
+        padding: 0;
+    
+        cursor: pointer;
+    }
+    .slick-dots li button
+    {
+        font-size: 0;
+        line-height: 0;
+    
+        display: block;
+    
+        width: 1em;
+        height: 1em;
+        
+        cursor: pointer;
+    
+        color: transparent;
+        border: 0;
+        outline: none;
+        background: transparent;
+    }
+    .slick-dots li button:hover,
+    .slick-dots li button:focus
+    {
+        outline: none;
+    }
+    .slick-dots li button:hover:before,
+    .slick-dots li button:focus:before
+    {
+        opacity: 1;
+    }
+    .slick-dots li button:before
+    {
+        font-family: 'slick';
+        font-size: 6px;
+        line-height: 20px;
+    
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 100%;
+        width: 2.15em;
+        height: 2.15em;
+    
+        content: '';
+        text-align: center;
+    
+        opacity: .75;
+        background-color: #fff;
+    
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .slick-dots li.slick-active button:before
+    {
+        opacity: .75;
+        background-color: #F79552;
+    ;
+    }
+    
+    /*Estilização de Arrows sliders */
+    .slick-prev,.slick-next{
+        cursor: pointer;
+    }
+    .slick-prev{
+        position: absolute;
+        z-index: 1;
+        top: 40%;
+        bottom: 0;
+        left: 15%;
+        background: no-repeat url("../assets/icons/arrow-left.svg");
+        width: 48px;
+        font-size: 0;
+    
+    }
+    .slick-next{
+        position: absolute;
+        z-index: 1;
+        top: 40%;
+        right: 15%;
+        bottom: 0;
+        background: no-repeat url("../assets/icons/arrow-right.svg");
+        width: 48px;
+        font-size: 0;
+    }
+    /*Estilização do Slider Principal*/
+    
+    .SliderPresentation {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    
+        div img {
+            width: 100%;
+    
+        }
+    
+    }
